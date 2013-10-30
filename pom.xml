@@ -75,6 +75,7 @@
           <systemPropertyVariables>
             <geb.build.baseUrl>http://google.com/ncr</geb.build.baseUrl>
             <geb.build.reportsDir>target/test-reports/geb</geb.build.reportsDir>
+            <geb.build.adapter>tests/GoogleWikipediaSpec.groovy</geb.build.adapter>
           </systemPropertyVariables>
         </configuration>
       </plugin>
