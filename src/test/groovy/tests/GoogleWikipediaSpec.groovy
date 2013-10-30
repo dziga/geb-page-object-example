@@ -17,6 +17,7 @@ package tests
 import geb.spock.GebReportingSpec
 import pages.GoogleHomePage
 import pages.GoogleResultsPage
+import pages.WikipediaPage;
 import spock.lang.Stepwise
 
 @Stepwise
@@ -31,14 +32,8 @@ class GoogleWikipediaSpec extends GebReportingSpec {
     }
     
     def "search for wikipedia"() {
-        given:
-        searchField = "wikipedia"
-        
-        and:
-        waitFor { searchButton.displayed }
-        
         when:
-        searchButton.click()
+        search "wikipedia"
         
         then:
         at GoogleResultsPage
@@ -46,16 +41,16 @@ class GoogleWikipediaSpec extends GebReportingSpec {
     
     def "the first result should be wikipedia"() {
         given:
-        def firstLink = $("li.g", 0).find("a.l")
+        at GoogleResultsPage
         
         expect:
-        firstLink.text() == "Wikipedia"
+        resultLink(0).text() == "Wikipedia"
         
         when:
-        firstLink.click()
+        resultLink(0).click()
         
         then:
-        waitFor { title == "Wikipedia, the free encyclopedia" }
+        at WikipediaPage
     }
     
 }

@@ -9,4 +9,10 @@ class GoogleHomePage extends Page {
         searchField { $("input[name=q]") }
         searchButton { btnG() }
     }
+	
+	void search(String searchTerm) {
+		searchField = searchTerm
+		waitFor { searchButton.displayed }
+		searchButton.click()
+	}
 }
