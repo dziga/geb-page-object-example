@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver
 // See: http://code.google.com/p/selenium/wiki/HtmlUnitDriver
 driver = { new FirefoxDriver() }
 reportsDir = new File("target/test-reports")
+
 environments {
 	
 	// run as “mvn -Dgeb.env=chrome test”
