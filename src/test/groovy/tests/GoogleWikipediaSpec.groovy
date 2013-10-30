@@ -17,7 +17,7 @@ package tests
 import geb.spock.GebReportingSpec
 import pages.GoogleHomePage
 import pages.GoogleResultsPage
-import pages.WikipediaPage;
+import pages.WikipediaPage
 import spock.lang.Stepwise
 
 @Stepwise
