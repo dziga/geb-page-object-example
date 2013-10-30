@@ -1,3 +1,4 @@
+package tests
 /*
  * Copyright 2011 the original author or authors.
  *
@@ -14,32 +15,33 @@
  * limitations under the License.
  */
 import geb.spock.GebReportingSpec
-
-import spock.lang.*
+import pages.GoogleHomePage
+import pages.GoogleResultsPage
+import spock.lang.Stepwise
 
 @Stepwise
 class GoogleWikipediaSpec extends GebReportingSpec {
     
     def "go to google"() {
         when:
-        go() // uses base url system property
+        to GoogleHomePage
         
         then:
-        title == "Google"
+        at GoogleHomePage
     }
     
     def "search for wikipedia"() {
         given:
-        q = "wikipedia"
+        searchField = "wikipedia"
         
         and:
-        waitFor { btnG().displayed }
+        waitFor { searchButton.displayed }
         
         when:
-        btnG().click()
+        searchButton.click()
         
         then:
-        waitFor { title.endsWith("Google Search") }
+        at GoogleResultsPage
     }
     
     def "the first result should be wikipedia"() {
