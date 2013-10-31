@@ -8,9 +8,10 @@
   <name>Geb Page-Object Example</name>
   <url>http://gebish.org</url>
   <properties>
-    <gebVersion>0.9.2</gebVersion>
+    <gebSpockVersion>0.9.1</gebSpockVersion>
+    <gebVersion>0.9.1</gebVersion>
     <seleniumVersion>2.35.0</seleniumVersion>
-    <groovyVersion>2.0.5</groovyVersion>
+    <groovyVersion>2.1.7</groovyVersion>
     <spockCoreVersion>0.7-groovy-2.0</spockCoreVersion>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -42,9 +43,14 @@
     <dependency>
       <groupId>org.gebish</groupId>
       <artifactId>geb-spock</artifactId>
-      <version>${gebVersion}</version>
+      <version>${gebSpockVersion}</version>
       <scope>test</scope>
     </dependency>
+	    <dependency>
+		<groupId>org.gebish</groupId>
+		<artifactId>geb-core</artifactId>
+		<version>${gebVersion}</version>
+	</dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-firefox-driver</artifactId>

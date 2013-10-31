@@ -1,6 +1,5 @@
 package tests
 
-import static org.junit.Assert.*
 import geb.spock.GebSpec
 import pages.EmailValidationPage
 import spock.lang.*
