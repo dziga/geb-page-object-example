@@ -27,6 +27,7 @@ class TomTomCreateAccountValidationSpec extends GebSpec {
 			to TomTomCreateAccountPage
 		and:
 			fill_in_form_with(email, password, passwordConfirm, firstName, lastName, country)
+			submit_the_form()
 		then:
 			password_field_is_red() || confirm_password_field_is_red()
 		
@@ -44,6 +45,7 @@ class TomTomCreateAccountValidationSpec extends GebSpec {
 			to TomTomCreateAccountPage
 		and:
 			fill_in_form_with(email, password, passwordConfirm, firstName, lastName, country)
+			submit_the_form()
 		then:
 			email_field_is_red() || password_field_is_red() || 
 			confirm_password_field_is_red() || first_name_field_is_red() ||
