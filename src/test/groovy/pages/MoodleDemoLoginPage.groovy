@@ -4,7 +4,7 @@ import geb.Page
 
 class MoodleDemoLoginPage extends Page{
 	static url = "http://demo.moodle.net/login/index.php"
-	static at = {title == "Moodle sandbox: Login to the site"}
+	static at = {title == "Moodle sandbox: Log in to the site"}
 	static content = {
 		firstname {$("#username")}
 		lastname {$("#password")}
