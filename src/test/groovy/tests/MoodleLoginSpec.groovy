@@ -6,7 +6,7 @@ import geb.spock.GebSpec
 import pages.MoodleDemoLoginPage
 import pages.MoodleDemoPage;
 
-class MoodleLogin extends GebSpec {
+class MoodleLoginSpec extends GebSpec {
 	def "page chaining"(){
 		given:
 		to MoodleDemoLoginPage
@@ -18,5 +18,4 @@ class MoodleLogin extends GebSpec {
 		then:
 		at MoodleDemoPage
 	}
-	
 }
