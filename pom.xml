@@ -10,7 +10,7 @@
   <properties>
     <gebSpockVersion>0.9.1</gebSpockVersion>
     <gebVersion>0.9.1</gebVersion>
-    <seleniumVersion>2.35.0</seleniumVersion>
+    <seleniumVersion>2.37.0</seleniumVersion>
     <groovyVersion>2.1.7</groovyVersion>
     <spockCoreVersion>0.7-groovy-2.0</spockCoreVersion>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -69,6 +69,11 @@
       <version>${seleniumVersion}</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+		<groupId>org.seleniumhq.selenium</groupId>
+		<artifactId>selenium-support</artifactId>
+		<version>${seleniumVersion}</version>
+	</dependency>
   </dependencies>
  
   <build>
